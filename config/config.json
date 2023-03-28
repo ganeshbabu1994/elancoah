@@ -1,0 +1,62 @@
+{
+  "dev": {
+    "username": "TranslationUser",
+    "password": "databaseuser123",
+    "database": "ICommDBTranslation_DEV",
+    "host": "10.10.88.55",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "development": {
+    "username": "TranslationUser",
+    "password": "databaseuser123",
+    "database": "ICommDBTranslation_DEV",
+    "host": "10.10.88.55",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "qa": {
+    "username": "TranslationUser",
+    "password": "databaseuser123",
+    "database": "ICommDBTranslation_QA",
+    "host": "10.10.88.55",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "uat": {
+    "username": "UATDB_DEVRW_user",
+    "password": "Delap@redwr$900",
+    "database": "ICommDBTranslation",
+    "host": "10.10.88.72",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "test": {
+    "username": "TranslationUser",
+    "password": "databaseuser123",
+    "database": "ICommDBTranslation",
+    "host": "10.10.88.55",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  },
+  "production": {
+    "username": "TranslationUser",
+    "password": "databaseuser123",
+    "database": "ICommDBTranslation",
+    "host": "10.10.88.55",
+    "dialect": "mssql",
+    "define": {
+      "freezeTableName": true
+    }
+  }
+}

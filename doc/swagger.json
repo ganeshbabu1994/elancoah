@@ -1,0 +1,198 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.1",
+        "title": "Node Streaming Application API",
+        "description": "Node Streaming Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "http://localhost:8080/api-docs",
+    "tags": [
+        {
+            "name": "User_Login",
+            "description": "API's for Translation"
+        },
+        {
+            "name": "Language",
+            "description": "Vendor Master"
+        },
+        {
+            "name": "Client",
+            "description": "Vendor Language"
+        }
+    ],
+    "basePath": "/",
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/litralee/api/v1/getUserById/{user_ID}": {
+            "get": {
+                "tags": [
+                    "User_Login"
+                ],
+                "description": "This API will get User details by id",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "user_ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID "
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        },
+        "/litralee/api/v1/getAllUser/{Client_ID}": {
+            "get": {
+                "tags": [
+                    "Client"
+                ],
+                "description": "This API will fetch all user details",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Client_ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID "
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        },
+        "/litralee/api/v1/accountPreference/{Client_ID},{User_ID}": {
+            "get": {
+                "tags": [
+                    "Preferences"
+                ],
+                "description": "This API will fetch Account Preference details",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "User_ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Client_ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID "
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        },
+        "/litralee/api/v1/getLanguageNames/{Client_ID}": {
+            "get": {
+                "tags": [
+                    "Language"
+                ],
+                "description": "This API will fetch Language details based on client",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Client_ID",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID "
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        },
+        "/litralee/api/v1/language/": {
+            "get": {
+                "tags": [
+                    "Language"
+                ],
+                "description": "This API will fetch Language details",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "400": {
+                        "description": "Invalid ID "
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "405": {
+                        "description": "Validation exception"
+                    }
+                }
+            }
+        }
+    }
+       
+}
